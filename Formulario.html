@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tecnología Digital">
+    <meta name="author" content="Norman Anderson">
+    <link rel="stylesheet" href="Diseño.css" />
+    <script src="https://kit.fontawesome.com/b57c34d13d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>FullStack Intermedio</title>
+    
+  </head>
+  
+  <body>
+    <section class="calculadora">
+              <a href="https://mythrillfiction.com/" target="_blank">Calculadora</a>
+              <p style="color: rgb(4, 87, 134)">Por favor pasa el mouse sobre la calculadora</p>
+      <div class="card">
+        <form action="calcular.php" method="POST">
+          <div>
+              <div>
+                <label for="num1">Ingrese número 1:</label> <br />
+                <input type="number" name="num1" id="num1" required />
+              </div> <br /><br />
+              <div>
+                <label for="num2">Ingrese número 2:</label> <br />
+                <input type="number" name="num2" id="num2" required />
+              </div> <br /><br />
+            <div class="form-group">
+                <label for="operacion">Operación:</label>
+                <select name="operacion" id="operacion">
+                    <option value="suma">Suma</option>
+                    <option value="resta">Resta</option>
+                    <option value="multiplicacion">Multiplicación</option>
+                    <option value="division">División</option>
+                </select><br/><br/><br/>
+                    <button type="submit" class="btn">Calcular</button>
+              <div id="resultado"><br/><br/>
+                  <label for="resultadoOperacion">
+                    El resultado de la operación es:
+                  </label><br/><br/>
+                    <input type="text" id="resultadoOperacion" readonly/>
+                    <br /><br />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+
+
+    <section class="estilo">
+
+      <h2 class="efecto-h2">Verficación de Edad</h2>
+      
+      <form action="edad.php" method="POST" onsubmit="return mostrarResultado()"> 
+        <label for="edad" style="color: blueviolet; font-size: 30px;">Ingresa tu edad:</label> <br> <br>
+        <input type="number" id="edad" name="edad" required> <br><br>
+        <input type="submit" value="Enviar">
+        </form>
+    </section> <br><br> <br><br>
+
+    <section class="estilo">
+      <h2 style="color: #800080; font-size: 50px;">Datos Solicitados</h2>
+      <form action="procesar.php" method="get" onsubmit="return validarFormulario()">
+        <label for="nombre" style="color: rgb(151, 64, 6); font-size: 30px;">Nombre:</label>
+        <input type="text" name="nombre" required><br><br>
+        <label for="apellido" style="color: rgb(151, 64, 6); font-size: 30px;">Apellido:</label>
+        <input type="text" name="apellido" required> <br><br> 
+        <label for="cedula" style="color: rgb(151, 64, 6); font-size: 30px;">Número de cédula:</label>
+        <input type="text" name="cedula" required><br><br>
+        <input type="submit" value="Enviar"> <br><br>
+      </form>
+    </section>      
+                       
+
+    <section class="estilo">
+
+      <h2 style="color: #800080; font-size: 50px;">Por favor ingrese su fecha de nacimiento</h2>
+
+      <form action="fecha.php" method="GET">
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label> <br><br>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+        <input type="submit" value="Enviar"> <br><br>
+    </form>      
+    </section> <br><br>
+
+    <section>
+      <h2 style="color: blueviolet; font-size: 50px; text-align: center;">Registro</h2>
+      <p style="text-align: center; font-size: 35px;">Pasa el mouse encima de la tarjeta y completa la información solicitada</p>
+      <div class="containers" style="align-items: center; display: flex;
+      justify-content: center;
+      align-items: center;">
+        
+        <div class="card" style="background-color: rgb(39, 63, 63);  border-radius: 6px;">          
+            
+            <form action="mi_register.php" method="post">
+                <h1>Ingresa tu nombre</h1>
+                <input type="text" name="Nombre">
+                <h1>Ingresa tu apellido</h1>
+                <input type="text" name="Apellido">
+                <h1>Ingresa tu No de Cedula</h1>
+                <input type="text" name="Cedula">
+                <button type="submit">Registrar</button>
+            </form>
+            
+            <div id="message" class="message"></div>
+        </div>
+      </div>
+    </section> <br><br><br><br><br>
+    <div>
+      <h2 style="text-align: center; color: rgb(51, 71, 11); font-size: 50px;">Registro de Usuarios </h2>       
+        <iframe src="Registro.php" style="width: 100%; height: 500px;"></iframe>
+       
+      
+       </div> 
+             <script src="script.js"></script>
+  </body>
+</html>
